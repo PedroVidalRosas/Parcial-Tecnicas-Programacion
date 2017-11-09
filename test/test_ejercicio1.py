@@ -10,21 +10,21 @@ class ejercicioTest(unittest.TestCase):
         resultado = ejercicio1.rotar(palabra)
 
         #assert
-        self.assertEquals(resultado,[])
+        self.assertEqual(resultado,[])
 
     def testRotarSiRecibeVariosEspaciosDeberiaDevolverListaVacia(self):
         palabra = "   "
 
         resultado = ejercicio1.rotar(palabra)
 
-        self.assertEquals(resultado,[])
+        self.assertEqual(resultado,[])
 
     def testRotarSirecibeUnaLetraDeberiaDevolverLoMismo(self):
         palabra = 'a'
 
         resultado = ejercicio1.rotar(palabra)
 
-        self.assertEquals(resultado,['a'])
+        self.assertEqual(resultado,['a'])
 
     def testRotarSiRecibeabDebreriadevolverabba(self):
         palabra = "ab"
