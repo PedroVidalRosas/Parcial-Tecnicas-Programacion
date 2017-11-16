@@ -25,13 +25,13 @@ def pedro(mapa,posicionesDeDisparosDePrueba):
             return list
     lista = []
     lista = life_siguiente(mapa,posicionesDeDisparosDePrueba)
-    pet= []
+    posicionesDeBarcosVivos= []
     for f in range(len(lista)):
         li = ()
         for c in range(len(lista[0])):
             if lista[f][c]=='b':
                 li = (f+1,c+1)
             if li!=[] and len(li)==2:
-                pet.append(li)
+                posicionesDeBarcosVivos.append(li)
                 li = []
-    return pet
+    return posicionesDeBarcosVivos

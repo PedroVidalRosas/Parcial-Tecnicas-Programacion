@@ -16,9 +16,9 @@ def rotar(palabra):
                 lista1.append(p[y])
             lista1.append(p[0])
             lista.append(lista1)
-        c = []
+        listaRotada = []
         for x in range(len(lista)):
-            c.append(''.join(lista[x]))
-        return c
+            listaRotada.append(''.join(lista[x]))
+        return listaRotada
     else:
         return lista
