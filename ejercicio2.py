@@ -1,13 +1,13 @@
-def siguiente(life,pocicion):
+def siguiente(mapaDelJuego,pocicion):
     siguiente = []
-    for f in range(len(life)):
+    for f in range(len(mapaDelJuego)):
         fila = []
-        for c in range(len(life[0])):
-            fila.append(disparo(life,f,c,pocicion))
+        for c in range(len(mapaDelJuego[0])):
+            fila.append(disparo(mapaDelJuego,f,c,pocicion))
         siguiente.append(fila)
     return siguiente
 
-def disparo(life,f,c,pocicion):
+def disparo(mapaDelJuego,f,c,pocicion):
 
     for x in range(len(pocicion)):
 
@@ -15,7 +15,7 @@ def disparo(life,f,c,pocicion):
         co=(pocicion[x][1])-1
         if f == fi and c == co:
             return '.'
-    return life[f][c]
+    return mapaDelJuego[f][c]
 
 
 def pedro(mapa,posicionesDeDisparosDePrueba):
