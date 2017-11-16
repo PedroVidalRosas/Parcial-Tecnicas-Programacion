@@ -1,14 +1,14 @@
 def rotar(palabra):
     lista=[]
     try:
-        pepe=palabra.split(" ")
-        if pepe[0] == '' and pepe[1] == '':
+        palabraARotar=palabra.split(" ")
+        if palabraARotar[0] == '' and palabraARotar[1] == '':
             return lista
     except:
-        pepe=0
+        palabraARotar=0
     if type(palabra)==str and palabra != "":
-        lista2 = list(palabra)
-        lista.append(lista2)
+        listaAuxiliar = list(palabra)
+        lista.append(listaAuxiliar)
         for x in range(len(palabra)-1):
             p =lista[x]
             lista1=[]
