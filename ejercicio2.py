@@ -1,13 +1,13 @@
-def life_siguiente(life,pocicion):
+def siguiente(life,pocicion):
     siguiente = []
     for f in range(len(life)):
         fila = []
         for c in range(len(life[0])):
-            fila.append(celda_siguiente(life,f,c,pocicion))
+            fila.append(disparo(life,f,c,pocicion))
         siguiente.append(fila)
     return siguiente
 
-def celda_siguiente(life,f,c,pocicion):
+def disparo(life,f,c,pocicion):
 
     for x in range(len(pocicion)):
 
@@ -24,7 +24,7 @@ def pedro(mapa,posicionesDeDisparosDePrueba):
         if len(mapa[x - 1]) != len(mapa[x]):
             return list
     lista = []
-    lista = life_siguiente(mapa,posicionesDeDisparosDePrueba)
+    lista = siguiente(mapa,posicionesDeDisparosDePrueba)
     posicionesDeBarcosVivos= []
     for f in range(len(lista)):
         li = ()
