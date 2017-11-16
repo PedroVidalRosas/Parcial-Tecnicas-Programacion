@@ -19,35 +19,35 @@ class ejercicioTest(unittest.TestCase):
 
         self.assertEqual(resultado,[])
 
-    def testRotarSirecibeUnaLetraDeberiaDevolverLoMismo(self):
+    def testRotarSirecibeUnaLetraDeberiaDevolverUnaListaConElElemento(self):
         palabra = 'a'
 
         resultado = ejercicio1.rotar(palabra)
 
         self.assertEqual(resultado,['a'])
 
-    def testRotarSiRecibeabDebreriadevolverabba(self):
+    def testRotarRecibeAUnaPalabraConDosLetrasDebreriaDevolverUnaListaConDosPalabrasRotadas(self):
         palabra = "ab"
 
         resultado = ejercicio1.rotar(palabra)
 
         self.assertEqual(resultado,['ab','ba'])
 
-    def testRotarSirecibeLapalabraPazdeberiaDevolverPazAzpZpa(self):
+    def testRotarSirecibeLapalabraConUnaPalabraDeTresLetrasDeberiaDevolverUnaListaConTresPalabrasRotadas(self):
         palabra = "paz"
 
         resultado = ejercicio1.rotar(palabra)
 
         self.assertEqual(resultado,['paz','azp','zpa'])
 
-    def testRotarSiRecibelapalabrasol(self):
+    def testRotarRecibeUnaPalabrasConDosLetrasConUnEspacioYUnaLetraDeberiaDevolverUnaListaConCuatroPalabrasRotadasSinImportarleElEspacio(self):
         palabra = "so l"
 
         resultado = ejercicio1.rotar(palabra)
 
         self.assertEqual(resultado,['so l','o ls',' lso','lso '])
 
-    def testRotarSiRecibePalabraRotar(self):
+    def testRotarSiRecibeUnaPalabraConCuatroLetrasDeberiaDevolverUnaListaConCuatroPalabrasRotadas(self):
         palabra = "rotar"
 
         resultadp = ejercicio1.rotar(palabra)

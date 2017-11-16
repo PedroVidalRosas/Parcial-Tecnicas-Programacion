@@ -2,64 +2,65 @@ import ejercicio2
 import unittest
 
 class Ejercicio2Test(unittest.TestCase):
-    def testPedroSirecibeUnaListaVaciaDeberiaDevolverUnaListaVacia(self):
+
+    def testPosicionesDeBarcosSinHundirSirecibeUnMapaVacioDeberiaDevolverUnaListaDePosicionesVacios(self):
         mapa = []
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
 
-        resultado = ejercicio2.pedro(mapa,posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.posicionesDeBarcosSinHundir(mapa,posicionesDeDisparosDePrueba)
 
         self.assertEqual(resultado,[])
 
-    def testPedroSirecibeUnMapaSinNada(self):
+    def testPosicionesDeBarcosSinHundirSirecibeUnMapaSinNadaDeberiaDevolverUnaListaVacia(self):
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
         mapa = ""
 
-        resultado = ejercicio2.pedro(mapa,posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.posicionesDeBarcosSinHundir(mapa,posicionesDeDisparosDePrueba)
 
         self.assertEqual(resultado,[])
 
-    def testPedroSiRecibeUnMapaConVariosEspacios(self):
+    def testPosicionesDeBarcosSinHundirSiRecibeUnMapaConVariosEspaciosDeberiaDevolverUnaListaVacia(self):
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
         mapa = "       "
 
-        resultado = ejercicio2.pedro(mapa,posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.posicionesDeBarcosSinHundir(mapa,posicionesDeDisparosDePrueba)
 
         self.assertEqual(resultado,[])
 
-    def testPedroSiResiveUnaStrDeberiaDevolverUnaListaVacia(self):
+    def testPosicionesDeBarcosSinHundirSiResiveUnaTresPalabrasDeberiaDevolverUnaListaVacia(self):
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
         mapa = "no soy valido"
 
-        resultado = ejercicio2.pedro(mapa,posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.posicionesDeBarcosSinHundir(mapa,posicionesDeDisparosDePrueba)
 
         self.assertEqual(resultado,[])
 
-    def testPedroSiRecibeUnaCadenaDeStrDeberiaDevolverUnaListaVacia(self):
+    def testPosicionesDeBarcosSinHundirSiRecibePalabrasConComasEntreEllasDeberiaDevolverUnaListaVacia(self):
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
         mapa = "yo","tambien","soy","invalido"
 
-        resultado = ejercicio2.pedro(mapa,posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.posicionesDeBarcosSinHundir(mapa,posicionesDeDisparosDePrueba)
 
         self.assertEqual(resultado,[])
-    def testpedroSirecibeUnMapaConDistintosLenDeberiaDevolverUnaListaVacia(self):
+    def testPosicionesDeBarcosSinHundirSirecibeUnMapaConDistintosLenDeberiaDevolverUnaListaVacia(self):
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
         mapa = ["b.b.","....","..bb","b.b"]
 
-        resultado = ejercicio2.pedro(mapa,posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.posicionesDeBarcosSinHundir(mapa,posicionesDeDisparosDePrueba)
 
         self.assertEqual(resultado,[])
 
-    def testPedroSiRecibeUnMapaValidoDeberiaDevolverLasPocicionesDeLosBarcosVivos(self):
+    def testPosicionesDeBarcosSinHundirSiRecibeUnMapaValidoDeberiaDevolverLasPocicionesDeLosposicionesDeBarcosSinHundir(self):
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
         mapa = ["b.b..","b...b",".....","....b"]
 
-        resultado = ejercicio2.pedro(mapa,posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.posicionesDeBarcosSinHundir(mapa,posicionesDeDisparosDePrueba)
 
         self.assertEqual(resultado,[(2,1),(2,5)])
-    def testPedroSiLosTirosEstanVaciosDeberiaDevolverLosBarcosVivos(self):
+    def testPosicionesDeBarcosSinHundirSiLosTirosEstanVaciosDeberiaDevolverLosposicionesDeBarcosSinHundir(self):
         posicionesDeDisparosDePrueba = []
         mapa = ["b..","...","..b"]
 
-        resultado = ejercicio2.pedro(mapa,posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.posicionesDeBarcosSinHundir(mapa,posicionesDeDisparosDePrueba)
 
         self.assertEqual(resultado,[(1,1),(3,3)])

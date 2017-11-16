@@ -18,7 +18,7 @@ def disparo(mapaDelJuego,f,c,pocicion):
     return mapaDelJuego[f][c]
 
 
-def pedro(mapa,posicionesDeDisparosDePrueba):
+def posicionesDeBarcosSinHundir(mapa, posicionesDeDisparosDePrueba):
     list = []
     for x in range(1, len(mapa)):
         if len(mapa[x - 1]) != len(mapa[x]):
