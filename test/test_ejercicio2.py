@@ -11,7 +11,7 @@ class Ejercicio2Test(unittest.TestCase):
 
         self.assertEqual(resultado,[])
 
-    def testPosicionesDeBarcosSinHundirSirecibeUnMapaSinNadaDeberiaDevolverUnaListaVacia(self):
+    def testPosicionesDeBarcosSinHundirSirecibeUnMapaInvalidoDeberiaDevolverUnaListaDePosicionesVacia(self):
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
         mapa = ""
 
@@ -19,7 +19,7 @@ class Ejercicio2Test(unittest.TestCase):
 
         self.assertEqual(resultado,[])
 
-    def testPosicionesDeBarcosSinHundirSiRecibeUnMapaConVariosEspaciosDeberiaDevolverUnaListaVacia(self):
+    def testPosicionesDeBarcosSinHundirSiRecibeUnMapaInvalidoConEspaciosDeberiaDevolverUnaListaDePosicionesvacia(self):
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
         mapa = "       "
 
@@ -27,7 +27,7 @@ class Ejercicio2Test(unittest.TestCase):
 
         self.assertEqual(resultado,[])
 
-    def testPosicionesDeBarcosSinHundirSiResiveUnaTresPalabrasDeberiaDevolverUnaListaVacia(self):
+    def testPosicionesDeBarcosSinHundirSiResiveUnMapaInvalidoConTresPalabrasDeberiaDevolverUnaListaDePosicionesvacia(self):
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
         mapa = "no soy valido"
 
@@ -35,14 +35,14 @@ class Ejercicio2Test(unittest.TestCase):
 
         self.assertEqual(resultado,[])
 
-    def testPosicionesDeBarcosSinHundirSiRecibePalabrasConComasEntreEllasDeberiaDevolverUnaListaVacia(self):
+    def testPosicionesDeBarcosSinHundirSiRecibeMapaInvalidoConPalabrasYComasEntreEllasDeberiaDevolverUnaListaDePsocionesVacio(self):
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
         mapa = "yo","tambien","soy","invalido"
 
         resultado = ejercicio2.posicionesDeBarcosSinHundir(mapa,posicionesDeDisparosDePrueba)
 
         self.assertEqual(resultado,[])
-    def testPosicionesDeBarcosSinHundirSirecibeUnMapaConDistintosLenDeberiaDevolverUnaListaVacia(self):
+    def testPosicionesDeBarcosSinHundirSirecibeUnMapaConDistintosLongitudDeCadenasDeberiaDevolverUnaListaVacia(self):
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
         mapa = ["b.b.","....","..bb","b.b"]
 

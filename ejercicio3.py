@@ -1,11 +1,11 @@
 def soloNombres(tupla):
-    k = []
+    equipos = []
     for x in range(len(tupla)):
-        k.append(tupla[x][0])
-    pedro=[]
-    for x in sorted(set(k)):
-        pedro.append(x)
-    return (pedro[0])
+        equipos.append(tupla[x][0])
+    lista=[]
+    for x in sorted(set(equipos)):
+        lista.append(x)
+    return (lista[0])
 
 def siSonIguales(tupla):
     lista = []
@@ -21,27 +21,27 @@ def siSonIguales(tupla):
 def primerempaque(tupla):
     lista = []
     for x in range(len(tupla)):
-        li = []
+        listaAux = []
         for y in range(1, len(tupla[0]), 2):
-            li.append(tupla[x][y - 1])
-            li.append(tupla[x][y])
+            listaAux.append(tupla[x][y - 1])
+            listaAux.append(tupla[x][y])
 
-        lista.append(li)
+        lista.append(listaAux)
     return lista
 
 def segundoEmpaque(lista):
-    p = []
+    equipos = []
     for x in range(len(lista)):
-        c = []
+        listaAux = []
         for y in range(0, len(lista[0])):
-            c = []
+            listaAux = []
             if type(lista[x][y]) == int:
-                c.append(lista[x][y - 1])
-                c.append(lista[x][y])
-            if c != []:
-                p.append(c)
+                listaAux.append(lista[x][y - 1])
+                listaAux.append(lista[x][y])
+            if listaAux != []:
+                equipos.append(listaAux)
 
-    return p
+    return equipos
 
 def calcularGanador(tupla):
     if tupla==[]:
