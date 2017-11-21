@@ -47,7 +47,7 @@ class ejercicioTest(unittest.TestCase):
 
         self.assertEqual(resultado,['so l','o ls',' lso','lso '])
 
-    def testRotarSiRecibeUnaPalabraConCuatroLetrasDeberiaDevolverUnaListaConCuatroPalabrasRotadas(self):
+    def testRotarSiRecibeUnaPalabraConCincoLetrasDeberiaDevolverUnaListaConCincoPalabrasRotadas(self):
         palabra = "rotar"
 
         resultadp = ejercicio1.rotar(palabra)
